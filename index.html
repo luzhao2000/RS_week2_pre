@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Short introduction of Landset OLI</title>
+    <title>Week2 Presentation</title>
     <meta charset="utf-8" />
     <meta name="author" content="Lu Zhao" />
     <script src="libs/header-attrs/header-attrs.js"></script>
+    <script src="libs/mark.js/mark.min.js"></script>
+    <link href="libs/xaringanExtra-search/search.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-search/search.js"></script>
+    <script>window.addEventListener('load', function() { window.xeSearch = new RemarkSearch({"position":"bottom-left","caseSensitive":false,"showIcon":true,"autoSearch":true}) })</script>
+    <link href="libs/panelset/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset/panelset.js"></script>
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
     <link rel="stylesheet" href="Extra_css.css" type="text/css" />
   </head>
@@ -13,10 +19,10 @@
 class: center, middle, inverse, title-slide
 
 .title[
-# Short introduction of Landset OLI
+# Week2 Presentation
 ]
 .subtitle[
-## Week2 Presentation
+## Introduction of Landsat OLI sensor
 ]
 .author[
 ### Lu Zhao
@@ -32,20 +38,23 @@ class: center, middle, inverse, title-slide
 
 
 
-class: inverse, center, middle
+
+
+class: center, middle
 # Outline
 ## Summary
 ## Application
 ## Reflection
+
 ---
 class: left, left
 # Summary
 
-.small[* The Landsat 8 satellite carries the Operational Land Imager (OLI) sensor, which is responsible for measurements in the visible, near-infrared and short-wave infrared components. Its images are available as panchromatic images with a spatial resolution of 15 meters and multi-spectral images of 30 meters. In addition, its observable area is extensive.]
+.small[* The Landsat 8 satellite carries the Operational Land Imager (OLI) sensor, which is responsible for measurements in the visible, near-infrared and short-wave infrared components ([Irons, Dwyer, and Barsi, 2012](#bib-ironsNextLandsatSatellite2012)). Its images are available as panchromatic images with a spatial resolution of 15 meters and multi-spectral images of 30 meters. In addition, its observable area is extensive ([Irons, Dwyer, and Barsi, 2012](#bib-ironsNextLandsatSatellite2012)).]
 
 --
 
-* The OLI sensor is a push-broom image acquisition sensor, which has a long array of photosensitive detectors.
+* The OLI sensor is a push-broom image acquisition sensor, which has a long array of photosensitive detectors ([Irons, Dwyer, and Barsi, 2012](#bib-ironsNextLandsatSatellite2012)).
 
 --
 .pull-left[
@@ -56,34 +65,50 @@ Source: [**OLI DESIGN**](https://landsat.gsfc.nasa.gov/article/oli-design/)
 ]
 
 ---
-class: inverse, left, left
+class: left, left
 ## Application
+1.*Application in comparing the changes in land use and land cover*
 
-1.Application in comparing the changes in land use and land cover
+.panelset[
+.panel[.panel-name[Summary of Application 1]
+
+[Mawenda, Watanabe, and Avtar (2020)](#bib-mawendaAnalysisUrbanLand2020a) used Landsat series satellite imagery to analyse land use and land cover type changes in Area A from 1994 to 2018. In classifying the land use and land cover types in 2018, remote sensing images returned by the OLI sensor carried by the Landsat 8 satellite were used. They chose the remote sensing images collected by the OLI sensor based on their 30 m spatial resolution and 16-day repetition period, and that their trajectories cover exactly the study area. In addition, the images were acquired at a high quality and no very obvious quality issues or errors were detected. I believe that the use of the data collected by the OLI sensor is appropriate for the subject and accuracy of their study, but if a higher resolution image is required to improve the accuracy of the land use classification, the data collected by the XX sensor may be more appropriate.
+]
+
+.panel[.panel-name[Example plots]
 .pull-left[
 &lt;img src="literature/Application1_1.png" width="50%" style="display: block; margin: auto;" /&gt;
-&lt;font size = 1&gt; Fig.2 False color image in Blantyre City collected by OLI sensor 
+&lt;font size = 1&gt; Fig.2 False color image in Blantyre City collected by OLI sensor
 ]
 
 .pull-right[
 &lt;img src="literature/Application1_2.png" width="80%" style="display: block; margin: auto;" /&gt;
 &lt;font size = 1&gt; Fig.3 Land use land cover classes in Blantyre City in 2018 
 ]
+]
+]
 
 ---
-class: inverse, left, left
+class:left, left
 ## Application
 
-2.Application in urban land expansion analysis
+2.*Application in urban land expansion analysis*
+.panelset[
+.panel[.panel-name[Summary of Application 2]
 
-&lt;img src="literature/Application2.png" width="70%" style="display: block; margin: auto;" /&gt;
+
+]
+
+.panel[.panel-name[Example plots]
+&lt;img src="literature/Application2.png" width="50%" style="display: block; margin: auto;" /&gt;
 &lt;font size = 1&gt; Fig.4 Urban expansion in Pearl River Delta
-
+]
+]
 ---
-class: inverse, left, left
+class:left, left
 ## Application
 
-3.Application in monitoring the growth status of crops
+3.*Application in monitoring the growth status of crops*
 
 ---
 class: left, left
@@ -103,27 +128,20 @@ From this week lecture, I learnt differences between level-1 and level-2 data, a
 
 In the future, I will focus more on exploring other sensors which carried by  satellites launched recently and comparing the differences between them. It might be helpful for me to review the contents in the courses, and also be familiar with the characteristics of these sensors, so that more appropriate data can be selected easier for research according to the different characteristics of the data collected by different sensors.
 
- 
-
 ---
 class: left, left
 ##References
---
 
-```r
-#remotes::install_github("ropensci/RefManageR")
-library(RefManageR)
-library(knitcitations)
-BibOptions(check.entries = FALSE,
-           bib.style = "authoryear",
-           cite.style = "authoryear",
-           style = "markdown",
-           hyperlink = TRUE,
-           dashed = FALSE,
-          no.print.fields=c("doi", "url", "urldate", "issn"))
-myBib &lt;- ReadBib("./literature/RS_wk2/RS_wk2.bib", check = FALSE)
-#citep(myBib,"lovelandLandsatBuildingStrong2012")
-```
+--
+&lt;a name=bib-ironsNextLandsatSatellite2012&gt;&lt;/a&gt;[Irons, J. R., J. L. Dwyer,
+and J. A. Barsi](#cite-ironsNextLandsatSatellite2012) (2012). "The next
+Landsat Satellite: The Landsat Data Continuity Mission". In: _Remote
+Sensing of Environment_ 122, pp. 11-21.
+
+&lt;a name=bib-mawendaAnalysisUrbanLand2020a&gt;&lt;/a&gt;[Mawenda, J., T. Watanabe,
+and R. Avtar](#cite-mawendaAnalysisUrbanLand2020a) (2020). "An Analysis of
+Urban Land Use/Land Cover Changes in Blantyre City, Southern Malawi
+(1994–2018)". In: _Sustainability_ 12.6, p. 2377.
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
