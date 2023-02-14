@@ -50,7 +50,7 @@ class: center, middle
 class: left, left
 # Summary
 
-.small[* The Landsat 8 satellite carries the Operational Land Imager (OLI) sensor, which is responsible for measurements in the visible, near-infrared and short-wave infrared components ([Irons, Dwyer, and Barsi, 2012](#bib-ironsNextLandsatSatellite2012)). Its images are available as panchromatic images with a spatial resolution of 15 meters and multi-spectral images of 30 meters. In addition, its observable area is extensive ([Irons, Dwyer, and Barsi, 2012](#bib-ironsNextLandsatSatellite2012)).]
+.small[* The Landsat 8 satellite carries the Operational Land Imager (OLI) sensor, which is responsible for measurements in the visible, near-infrared and short-wave infrared components &lt;a name=cite-ironsNextLandsatSatellite2012&gt;&lt;/a&gt;([Irons, Dwyer, and Barsi, 2012](#bib-ironsNextLandsatSatellite2012)). Its images are available as panchromatic images with a spatial resolution of 15 meters and multi-spectral images of 30 meters. In addition, its observable area is extensive ([Irons, Dwyer, and Barsi, 2012](#bib-ironsNextLandsatSatellite2012)).]
 
 --
 
@@ -72,10 +72,10 @@ class: left, left
 .panelset[
 .panel[.panel-name[Summary of Application 1]
 
-[Mawenda, Watanabe, and Avtar (2020)](#bib-mawendaAnalysisUrbanLand2020a) used Landsat series satellite imagery to analyse land use and land cover type changes in Area A from 1994 to 2018. In classifying the land use and land cover types in 2018, remote sensing images returned by the OLI sensor carried by the Landsat 8 satellite were used. They chose the remote sensing images collected by the OLI sensor based on their 30 m spatial resolution and 16-day repetition period, and that their trajectories cover exactly the study area. In addition, the images were acquired at a high quality and no very obvious quality issues or errors were detected. I believe that the use of the data collected by the OLI sensor is appropriate for the subject and accuracy of their study, but if a higher resolution image is required to improve the accuracy of the land use classification, the data collected by the XX sensor may be more appropriate.
+&lt;a name=cite-mawendaAnalysisUrbanLand2020a&gt;&lt;/a&gt;[Mawenda, Watanabe, and Avtar (2020)](#bib-mawendaAnalysisUrbanLand2020a) used Landsat series satellite imagery to analyse land use and land cover type changes in Area A from 1994 to 2018. In classifying the land use and land cover types in 2018, remote sensing images returned by the OLI sensor carried by the Landsat 8 satellite were used. They chose the remote sensing images collected by the OLI sensor based on their 30 m spatial resolution and 16-day repetition period, and that their trajectories cover exactly the study area. In addition, the images were acquired at a high quality and no very obvious quality issues or errors were detected. I believe that the use of the data collected by the OLI sensor is appropriate for the subject and accuracy of their study, but if a higher resolution image is required to improve the accuracy of the land use classification, the data collected by the XX sensor may be more appropriate.
 ]
 
-.panel[.panel-name[Example plots]
+.panel[.panel-name[Example results]
 .pull-left[
 &lt;img src="literature/Application1_1.png" width="50%" style="display: block; margin: auto;" /&gt;
 &lt;font size = 1&gt; Fig.2 False color image in Blantyre City collected by OLI sensor
@@ -95,53 +95,84 @@ class:left, left
 2.*Application in urban land expansion analysis*
 .panelset[
 .panel[.panel-name[Summary of Application 2]
-
-
+&lt;a name=cite-huaImpactsExpansionUrban2020&gt;&lt;/a&gt;[Hua, Zhang, Nie, Sun, and Tang (2020)](#bib-huaImpactsExpansionUrban2020) explored the impacts of urban expansion on urban heat islands in Xiamen, China from 1989 to 2016 based on remote sensing technologies. They used the images collected by OLI sensor to evaluate the urban heat island effect in Xiamen city in 2016, since they need to compute several indices to explore the distribution of different kinds of land use, including NDVI for retrieving vegetation area, MNDVI for retrieving water area,and other indices ([Hua, Zhang, Nie et al., 2020](#bib-huaImpactsExpansionUrban2020)). However, one of the most important indices when analyzing urban heart island effects is land surface temperature (LST), authors chose Landsat 8 TIRS images to compute LST based on modified single channel algorithm, not using Landsat 8 OLI images ([Hua, Zhang, Nie et al., 2020](#bib-huaImpactsExpansionUrban2020)).
 ]
 
-.panel[.panel-name[Example plots]
+.panel[.panel-name[Example results]
 &lt;img src="literature/Application2.png" width="50%" style="display: block; margin: auto;" /&gt;
-&lt;font size = 1&gt; Fig.4 Urban expansion in Pearl River Delta
+&lt;font size = 1&gt; Fig.4 Calculated urban expansion in Xiamen City from 1989 to 2016.
+]
+
+.panel[.panel-name[Discussion]
+* This application shows that the resolution of OLI images can assist in the analysis of urban heat island effect and urban expansion analysis based on the urban scale.
+* The reason they chose the TIRS images to calculate LST may be that the bands 10 of the TIRS sensor are unique thermal infrared (TIR) bands whereas the OLI sensor does not have thermal infrared bands ([Hua, Zhang, Nie et al., 2020](#bib-huaImpactsExpansionUrban2020)).
+* Therefore, I think this may be a limitation to using OLI sensor images in future studies, but this problem can be solved by combining OLI images with other sensor images that have TIR bands or by using other sensors, for instance Landsat 7 ETM+ &lt;a name=cite-nugrahaComparisonLandSurface2019&gt;&lt;/a&gt;([Nugraha, Gunawan, and Kamal, 2019](#bib-nugrahaComparisonLandSurface2019)).
 ]
 ]
 ---
 class:left, left
 ## Application
-
 3.*Application in monitoring the growth status of crops*
+.panelset[
+.panel[.panel-name[Summary of Application 3]
 
+]
+
+.panel[.panel-name[Example results]
+
+&lt;font size = 1&gt; Fig.5 .
+]
+
+.panel[.panel-name[Discussion]
+
+]
+]
 ---
 class: left, left
-## Reflection (why interesting &amp; how useful)
+## Reflection
+.panelset[
+.panel[.panel-name[learnt from Landsat OLI]
+* The OLI sensor is a significant upgrade over previous sensors carried by the Landsat series of satellites, returning remote sensing images that can be used to target urban, farm, forest and other types of areas.
+* However, it still has limitations. For instance, because its spatial resolution, it cannot be used to classify classes of land use detailed and monitor land use change in small areas (e.g. Variation of vegetation species distribution in wetland park) 
+* I find it very interesting that the satellites carry sensors with different characteristics that allow different types of data to be collected and used for different types of analysis, as if a photograph contains a large amount of information, which means that more data can be collected in less time and also reduces the memory footprint.
+]
 
-* What I have learnt?
+.panel[.panel-name[learnt from Xaringan]
+* Xaringan is a very interesting way to make presentation. Xaringan slides can be created with the help of simple codes only, and pages can be very clean.
+* After studying and using Xaringan for a while, I think it is more suitable for presentations that involve explaining code than traditional PowerPoint. Because it can directly add code chunk, it is easy to copy and paste code. Moreover, I think Xaringan is easier to reproduce than PowerPoint.
+* However, Xaringan currently does not have a note window in PPT, so we cannot write down some notes at any time. In addition, the content marked on the page cannot be saved, which makes it less suitable for taking notes in class or for taking minutes of meetings.
+]
 
-The OLI sensor is a significant upgrade over previous sensors carried by the Landsat series of satellites, returning remote sensing images that can be used to target urban, farm, forest and other types of areas.
-
-However, it still has limitations. For instance, because its spatial resolution, it cannot be used to classify classes of land use detailed and monitor land use change in small areas (e.g. Variation of vegetation species distribution in wetland park) 
-
-From this week lecture, I learnt differences between level-1 and level-2 data, and also what is image correlation and enhancement, and the principle of them.
-
---
-
-* Future work
-
-In the future, I will focus more on exploring other sensors which carried by  satellites launched recently and comparing the differences between them. It might be helpful for me to review the contents in the courses, and also be familiar with the characteristics of these sensors, so that more appropriate data can be selected easier for research according to the different characteristics of the data collected by different sensors.
+.panel[.panel-name[Future work]
+* In the future, I will focus more on exploring more applications based on Landsat 8 OLI images and other sensors which carried by satellites launched recently and comparing the differences between them. It might be helpful for me to review the contents in the courses, and also be familiar with different characteristics of these sensors, so that more appropriate images can be selected easier for research in the future.
+* The practice and use of Xaringan will continue, and I will try to add more elements to make the Xaringan slides more aesthetically pleasing, such as adding emojis appropriatly, adding animations when switching between slides, videos and musics.
+]
+]
 
 ---
 class: left, left
 ##References
 
---
-&lt;a name=bib-ironsNextLandsatSatellite2012&gt;&lt;/a&gt;[Irons, J. R., J. L. Dwyer,
-and J. A. Barsi](#cite-ironsNextLandsatSatellite2012) (2012). "The next
-Landsat Satellite: The Landsat Data Continuity Mission". In: _Remote
-Sensing of Environment_ 122, pp. 11-21.
+&lt;a name=bib-huaImpactsExpansionUrban2020&gt;&lt;/a&gt;[Hua, L., X. Zhang, Q.
+Nie, et al.](#cite-huaImpactsExpansionUrban2020) (2020). "The Impacts
+of the Expansion of Urban Impervious Surfaces on Urban Heat Islands in
+a Coastal City in China". In: _Sustainability_ 12.2, p. 475.
 
-&lt;a name=bib-mawendaAnalysisUrbanLand2020a&gt;&lt;/a&gt;[Mawenda, J., T. Watanabe,
-and R. Avtar](#cite-mawendaAnalysisUrbanLand2020a) (2020). "An Analysis of
-Urban Land Use/Land Cover Changes in Blantyre City, Southern Malawi
-(1994–2018)". In: _Sustainability_ 12.6, p. 2377.
+&lt;a name=bib-ironsNextLandsatSatellite2012&gt;&lt;/a&gt;[Irons, J. R., J. L.
+Dwyer, and J. A. Barsi](#cite-ironsNextLandsatSatellite2012) (2012).
+"The next Landsat Satellite: The Landsat Data Continuity Mission". In:
+_Remote Sensing of Environment_ 122, pp. 11-21.
+
+&lt;a name=bib-mawendaAnalysisUrbanLand2020a&gt;&lt;/a&gt;[Mawenda, J., T.
+Watanabe, and R. Avtar](#cite-mawendaAnalysisUrbanLand2020a) (2020).
+"An Analysis of Urban Land Use/Land Cover Changes in Blantyre City,
+Southern Malawi (1994–2018)". In: _Sustainability_ 12.6, p. 2377.
+
+&lt;a name=bib-nugrahaComparisonLandSurface2019&gt;&lt;/a&gt;[Nugraha, A. S. A., T.
+Gunawan, and M. Kamal](#cite-nugrahaComparisonLandSurface2019) (2019).
+"Comparison of Land Surface Temperature Derived From Landsat 7 ETM+ and
+Landsat 8 OLI/TIRS for Drought Monitoring". In: _IOP Conference Series:
+Earth and Environmental Science_ 313.1, p. 012041.
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
