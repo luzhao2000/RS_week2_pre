@@ -31,7 +31,7 @@ class: center, middle, inverse, title-slide
 ### CASA
 ]
 .date[
-### 2023/01/25 (updated: 2023-02-14)
+### 2023/01/25 (updated: 2023-02-15)
 ]
 
 ---
@@ -40,11 +40,15 @@ class: center, middle, inverse, title-slide
 
 
 
-class: center, middle
-# Outline
-## Summary
-## Application
-## Reflection
+
+class: left, middle
+
+### Outline
+
+&lt;font size = 5&gt; 
+* Summary
+* Application
+* Reflection
 
 ---
 class: left, left
@@ -67,24 +71,27 @@ Source: [**OLI DESIGN**](https://landsat.gsfc.nasa.gov/article/oli-design/)
 ---
 class: left, left
 ## Application
-1.*Application in comparing the changes in land use and land cover*
+1.**Application in comparing the changes in land use and land cover**
 
 .panelset[
 .panel[.panel-name[Summary of Application 1]
 
-&lt;a name=cite-mawendaAnalysisUrbanLand2020a&gt;&lt;/a&gt;[Mawenda, Watanabe, and Avtar (2020)](#bib-mawendaAnalysisUrbanLand2020a) used Landsat series satellite imagery to analyse land use and land cover type changes in Area A from 1994 to 2018. In classifying the land use and land cover types in 2018, remote sensing images returned by the OLI sensor carried by the Landsat 8 satellite were used. They chose the remote sensing images collected by the OLI sensor based on their 30 m spatial resolution and 16-day repetition period, and that their trajectories cover exactly the study area. In addition, the images were acquired at a high quality and no very obvious quality issues or errors were detected. I believe that the use of the data collected by the OLI sensor is appropriate for the subject and accuracy of their study, but if a higher resolution image is required to improve the accuracy of the land use classification, the data collected by the XX sensor may be more appropriate.
+&lt;a name=cite-mawendaAnalysisUrbanLand2020a&gt;&lt;/a&gt;[Mawenda, Watanabe, and Avtar (2020)](#bib-mawendaAnalysisUrbanLand2020a) used Landsat series satellite imagery to analyse land use and land cover type changes in Area A from 1994 to 2018. In classifying the land use and land cover types in 2018, remote sensing images returned by the OLI sensor carried by the Landsat 8 satellite were used. They chose the remote sensing images collected by the OLI sensor based on their 30 m spatial resolution and 16-day repetition period, and that their trajectories cover exactly the study area. In addition, the images were acquired at a high quality and no very obvious quality issues or errors were detected.
 ]
 
 .panel[.panel-name[Example results]
 .pull-left[
 &lt;img src="literature/Application1_1.png" width="50%" style="display: block; margin: auto;" /&gt;
-&lt;font size = 1&gt; Fig.2 False color image in Blantyre City collected by OLI sensor
+&lt;font size = 1&gt; Fig.2 False color image in Blantyre City collected by OLI sensor ([Mawenda, Watanabe, and Avtar, 2020](#bib-mawendaAnalysisUrbanLand2020a)).
 ]
 
 .pull-right[
 &lt;img src="literature/Application1_2.png" width="80%" style="display: block; margin: auto;" /&gt;
-&lt;font size = 1&gt; Fig.3 Land use land cover classes in Blantyre City in 2018 
+&lt;font size = 1&gt; Fig.3 Land use land cover classes in Blantyre City in 2018 ([Mawenda, Watanabe, and Avtar, 2020](#bib-mawendaAnalysisUrbanLand2020a)).
 ]
+]
+.panel[.panel-name[Discussion]
+* I believe that the use of the data collected by the OLI sensor is appropriate for the subject and accuracy of their study, but if a higher resolution image is required to improve the accuracy of the land use classification, maybe they can try to use World View-2 data, which has higher spatial resolution &lt;a name=cite-zhuLandUseLandCoverChange2022&gt;&lt;/a&gt;([Zhu, Guo, Deng, Shi, Guan, Zhong, Zhang, and Li, 2022](#bib-zhuLandUseLandCoverChange2022)).
 ]
 ]
 
@@ -92,7 +99,7 @@ class: left, left
 class:left, left
 ## Application
 
-2.*Application in urban land expansion analysis*
+2.**Application in urban land expansion analysis**
 .panelset[
 .panel[.panel-name[Summary of Application 2]
 &lt;a name=cite-huaImpactsExpansionUrban2020&gt;&lt;/a&gt;[Hua, Zhang, Nie, Sun, and Tang (2020)](#bib-huaImpactsExpansionUrban2020) explored the impacts of urban expansion on urban heat islands in Xiamen, China from 1989 to 2016 based on remote sensing technologies. They used the images collected by OLI sensor to evaluate the urban heat island effect in Xiamen city in 2016, since they need to compute several indices to explore the distribution of different kinds of land use, including NDVI for retrieving vegetation area, MNDVI for retrieving water area,and other indices ([Hua, Zhang, Nie et al., 2020](#bib-huaImpactsExpansionUrban2020)). However, one of the most important indices when analyzing urban heart island effects is land surface temperature (LST), authors chose Landsat 8 TIRS images to compute LST based on modified single channel algorithm, not using Landsat 8 OLI images ([Hua, Zhang, Nie et al., 2020](#bib-huaImpactsExpansionUrban2020)).
@@ -100,7 +107,7 @@ class:left, left
 
 .panel[.panel-name[Example results]
 &lt;img src="literature/Application2.png" width="50%" style="display: block; margin: auto;" /&gt;
-&lt;font size = 1&gt; Fig.4 Calculated urban expansion in Xiamen City from 1989 to 2016.
+&lt;font size = 1&gt; Fig.4 Calculated urban expansion in Xiamen City from 1989 to 2016 ([Hua, Zhang, Nie et al., 2020](#bib-huaImpactsExpansionUrban2020)).
 ]
 
 .panel[.panel-name[Discussion]
@@ -112,32 +119,34 @@ class:left, left
 ---
 class:left, left
 ## Application
-3.*Application in monitoring the growth status of crops*
+3.**Application in monitoring the growth status of crops**
 .panelset[
 .panel[.panel-name[Summary of Application 3]
-
+* &lt;a name=cite-ozelkanMultiscaleObjectbasedDrought2016&gt;&lt;/a&gt;[Ozelkan, Chen, and Ustundag (2016)](#bib-ozelkanMultiscaleObjectbasedDrought2016) used Landsat 8 OLI imagery to calculate NDVI and standardized precipitation index to monitor drought conditions in irrigated agricultural areas in the Southeast Anatolia region of Turkey during the spring and summer seasons of 2013 and 2014.
+* The authors did not specify their reasons for choosing OLI imagery to calculate NDVI, and I suspect this may be due to the fact that it is an open source data set and the data quality is high, so there is not much difficulty in the tasks of acquiring the data and processing the data. In addition, the higher resolution of the OLI images can help the authors to obtain results with a higher degree of accuracy to some extent.
 ]
 
 .panel[.panel-name[Example results]
-
-&lt;font size = 1&gt; Fig.5 .
+&lt;img src="literature/Application3.png" width="40%" style="display: block; margin: auto;" /&gt;
+&lt;font size = 1&gt; Fig.5 NDVI images in Spring and Summer in 2013 and 2014 in Southeast ([Ozelkan, Chen, and Ustundag, 2016](#bib-ozelkanMultiscaleObjectbasedDrought2016)).
 ]
 
 .panel[.panel-name[Discussion]
-
+* The accuracy of their results is high when they calculate NDVI and SPI based on OLI imagery and build a model to monitor drought conditions on irrigated agricultural land in the study area. This indicates that the use of OLI imagery and this research method is acceptable.
+* Although Landsat 8 OLI imagery is the more commonly used and widely available source of data, the data used in this study may be replaced by other data such as MODIS Terra Vegetation Indices data, which is also available as open source data on the USGS website and from which NDVI can be obtained directly, but at a much lower spatial resolution of 1km &lt;a name=cite-jameiTimeseriesDatasetLand2019&gt;&lt;/a&gt;([Jamei, Rajagopalan, and Sun, 2019](#bib-jameiTimeseriesDatasetLand2019)).
 ]
 ]
 ---
 class: left, left
 ## Reflection
 .panelset[
-.panel[.panel-name[learnt from Landsat OLI]
+.panel[.panel-name[Learnt from Landsat OLI]
 * The OLI sensor is a significant upgrade over previous sensors carried by the Landsat series of satellites, returning remote sensing images that can be used to target urban, farm, forest and other types of areas.
 * However, it still has limitations. For instance, because its spatial resolution, it cannot be used to classify classes of land use detailed and monitor land use change in small areas (e.g. Variation of vegetation species distribution in wetland park) 
 * I find it very interesting that the satellites carry sensors with different characteristics that allow different types of data to be collected and used for different types of analysis, as if a photograph contains a large amount of information, which means that more data can be collected in less time and also reduces the memory footprint.
 ]
 
-.panel[.panel-name[learnt from Xaringan]
+.panel[.panel-name[Learnt from Xaringan]
 * Xaringan is a very interesting way to make presentation. Xaringan slides can be created with the help of simple codes only, and pages can be very clean.
 * After studying and using Xaringan for a while, I think it is more suitable for presentations that involve explaining code than traditional PowerPoint. Because it can directly add code chunk, it is easy to copy and paste code. Moreover, I think Xaringan is easier to reproduce than PowerPoint.
 * However, Xaringan currently does not have a note window in PPT, so we cannot write down some notes at any time. In addition, the content marked on the page cannot be saved, which makes it less suitable for taking notes in class or for taking minutes of meetings.
@@ -145,14 +154,14 @@ class: left, left
 
 .panel[.panel-name[Future work]
 * In the future, I will focus more on exploring more applications based on Landsat 8 OLI images and other sensors which carried by satellites launched recently and comparing the differences between them. It might be helpful for me to review the contents in the courses, and also be familiar with different characteristics of these sensors, so that more appropriate images can be selected easier for research in the future.
-* The practice and use of Xaringan will continue, and I will try to add more elements to make the Xaringan slides more aesthetically pleasing, such as adding emojis appropriatly, adding animations when switching between slides, videos and musics.
+* The practice and use of Xaringan will continue, and I will try to add more elements to make the Xaringan slides more aesthetically pleasing, such as adding emojis appropriately, adding animations when switching between slides, videos and musics.
 ]
 ]
 
 ---
 class: left, left
 ##References
-
+.small[
 &lt;a name=bib-huaImpactsExpansionUrban2020&gt;&lt;/a&gt;[Hua, L., X. Zhang, Q.
 Nie, et al.](#cite-huaImpactsExpansionUrban2020) (2020). "The Impacts
 of the Expansion of Urban Impervious Surfaces on Urban Heat Islands in
@@ -162,6 +171,12 @@ a Coastal City in China". In: _Sustainability_ 12.2, p. 475.
 Dwyer, and J. A. Barsi](#cite-ironsNextLandsatSatellite2012) (2012).
 "The next Landsat Satellite: The Landsat Data Continuity Mission". In:
 _Remote Sensing of Environment_ 122, pp. 11-21.
+
+&lt;a name=bib-jameiTimeseriesDatasetLand2019&gt;&lt;/a&gt;[Jamei, Y., P.
+Rajagopalan, and Q. C. Sun](#cite-jameiTimeseriesDatasetLand2019)
+(2019). "Time-Series Dataset on Land Surface Temperature, Vegetation,
+Built up Areas and Other Climatic Factors in Top 20 Global Cities
+(2000–2018)". In: _Data in Brief_ 23, p. 103803.
 
 &lt;a name=bib-mawendaAnalysisUrbanLand2020a&gt;&lt;/a&gt;[Mawenda, J., T.
 Watanabe, and R. Avtar](#cite-mawendaAnalysisUrbanLand2020a) (2020).
@@ -173,6 +188,22 @@ Gunawan, and M. Kamal](#cite-nugrahaComparisonLandSurface2019) (2019).
 "Comparison of Land Surface Temperature Derived From Landsat 7 ETM+ and
 Landsat 8 OLI/TIRS for Drought Monitoring". In: _IOP Conference Series:
 Earth and Environmental Science_ 313.1, p. 012041.
+
+&lt;a name=bib-ozelkanMultiscaleObjectbasedDrought2016&gt;&lt;/a&gt;[Ozelkan, E.,
+G. Chen, and B. B.
+Ustundag](#cite-ozelkanMultiscaleObjectbasedDrought2016) (2016).
+"Multiscale Object-Based Drought Monitoring and Comparison in Rainfed
+and Irrigated Agriculture from Landsat 8 OLI Imagery". In:
+_International Journal of Applied Earth Observation and Geoinformation_
+44, pp. 159-170.
+
+&lt;a name=bib-zhuLandUseLandCoverChange2022&gt;&lt;/a&gt;[Zhu, Q., X. Guo, W.
+Deng, et al.](#cite-zhuLandUseLandCoverChange2022) (2022).
+"Land-Use/Land-Cover Change Detection Based on a Siamese Global
+Learning Framework for High Spatial Resolution Remote Sensing Imagery".
+In: _ISPRS Journal of Photogrammetry and Remote Sensing_ 184, pp.
+63-78.
+]
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
